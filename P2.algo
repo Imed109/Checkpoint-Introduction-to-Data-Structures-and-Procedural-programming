@@ -1,0 +1,25 @@
+PROCEDURE dot_product(v1: ARRAY of REAL, v2: ARRAY of REAL, OUT ps: REAL)
+VAR
+    i: INTEGER
+BEGIN
+    ps := 0
+
+    FOR i FROM 0 TO LENGTH(v1) - 1
+        ps := ps + (v1[i] * v2[i])
+    END FOR
+END
+ALGORITHM Dot product
+VAR
+    v1, v2: ARRAY of REAL
+    
+    
+
+BEGIN
+    FOR i FROM 1 TO n 
+        read v1 , v2
+        ps:= CALL dot_product(v1, v2)
+        IF (ps=0) THEN
+            RETURN (the vectors are ortho)
+        END_IF
+    END_FOR
+END

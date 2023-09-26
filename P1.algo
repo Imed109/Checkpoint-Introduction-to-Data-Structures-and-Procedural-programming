@@ -1,0 +1,40 @@
+ALGORITHM FindDistinctSum
+
+
+VAR:
+    T1 , T2 , T3: ARRAY of INTEGER
+    sum: INTEGER
+    elementExists: BOOLEAN
+
+BEGIN
+    sum := 0
+    
+    FOR i FROM 0 TO LENGTH(T1) - 1
+        elementExists := FALSE
+        FOR j FROM 0 TO LENGTH(T3) - 1
+            IF T1[i] = T3[j] THEN
+                elementExists := TRUE
+                BREAK  
+            END IF
+        END FOR   
+        IF NOT elementExists THEN
+            ADD T1[i] TO T3
+            sum := sum + T1[i]
+        END IF
+    END FOR
+    FOR i FROM 0 TO LENGTH(T2) - 1
+        elementExists := FALSE
+        FOR j FROM 0 TO LENGTH(T3) - 1
+            IF T2[i] = T3[j] THEN
+                elementExists := TRUE
+                BREAK  
+            END IF
+        END FOR      
+        IF NOT elementExists THEN
+            ADD T2[i] TO T3
+            sum := sum + T2[i]
+        END IF
+    END FOR
+
+    RETURN sum
+END
