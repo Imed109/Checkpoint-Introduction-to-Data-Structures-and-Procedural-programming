@@ -1,10 +1,11 @@
-PROCEDURE dot_product(v1: ARRAY of REAL, v2: ARRAY of REAL, OUT ps: REAL)
+PROCEDURE dot_product(v1: ARRAY of REAL, v2: ARRAY of REAL, )
 VAR
     i: INTEGER
+    ps: REAL
 BEGIN
-    ps := 0
+    ps := 0   //initializing the dot product
 
-    FOR i FROM 0 TO LENGTH(v1) - 1
+    FOR i FROM 0 TO LENGTH(v1) - 1      //calculating the dot 
         ps := ps + (v1[i] * v2[i])
     END FOR
 END
@@ -16,10 +17,10 @@ VAR
 
 BEGIN
     FOR i FROM 1 TO n 
-        read v1 , v2
-        ps:= CALL dot_product(v1, v2)
+        read v1 , v2  //read the vectors v1 and v2
+        ps:= CALL dot_product(v1, v2) 
         IF (ps=0) THEN
-            RETURN (the vectors are ortho)
+            write "the vectors are orthogonal"
         END_IF
     END_FOR
 END

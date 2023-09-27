@@ -1,0 +1,31 @@
+FUNCTION dot_product(v1: ARRAY of REAL, v2: ARRAY of REAL) 
+VAR
+    ps: REAL
+    i: INTEGER
+BEGIN
+    ps := 0
+    FOR i FROM 0 TO LENGTH(v1) - 1   //calculating the dot product
+        ps := ps + (v1[i] * v2[i])
+    END FOR
+    RETURN ps
+END FUNCTION
+
+ALGORITHM Dot product
+VAR
+    v1, v2: ARRAY of REAL
+    ps: REAL
+    i, j: INTEGER
+
+BEGIN
+    FOR i FROM 1 TO n                  // Reading vectors v1 and v2 
+        INPUT v1, v2
+
+        ps := CALL dot_product(v1, v2)
+
+        
+        IF ps = 0 THEN         // Check if the dot product is zero (orthogonal)
+            write "Vectors are orthogonal"
+        
+        END IF
+    END FOR
+END
