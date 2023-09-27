@@ -24,7 +24,7 @@ BEGIN
 
         
         IF ps = 0 THEN         // Check if the dot product is zero (orthogonal)
-            write "Vectors are orthogonal"
+            RETURN "Vectors are orthogonal"
         
         END IF
     END FOR
