@@ -1,4 +1,4 @@
-FUNCTION dot_product(v1: ARRAY of REAL, v2: ARRAY of REAL) 
+FUNCTION dot_product(v1: ARRAY of REAL, v2: ARRAY of REAL) // declaring the function
 VAR
     ps: REAL
     i: INTEGER

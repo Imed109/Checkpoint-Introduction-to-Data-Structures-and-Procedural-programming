@@ -1,4 +1,4 @@
-PROCEDURE dot_product(v1: ARRAY of REAL, v2: ARRAY of REAL, )
+PROCEDURE dot_product(v1: ARRAY of REAL, v2: ARRAY of REAL, )  // the procedure 
 VAR
     i: INTEGER
     ps: REAL
